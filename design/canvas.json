@@ -2,6 +2,7 @@
   "artboards": [
     { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1200, "h": 3520, "title": "Desktop — Editorial Engineering" },
     { "file": "Mobile.dc.html", "x": 1320, "y": 0, "w": 390, "h": 2320, "title": "Mobile" },
+    { "file": "MainDark.dc.html", "x": 1830, "y": 0, "w": 1200, "h": 3520, "title": "Desktop — Dark Violet" },
     { "file": "DirectionTerminal.dc.html", "x": 0, "y": 3680, "w": 560, "h": 760, "title": "Alt A — Terminal Dark (sketch)" },
     { "file": "DirectionBigType.dc.html", "x": 660, "y": 3680, "w": 560, "h": 760, "title": "Alt B — Big-Type Poster (sketch)" }
   ],
