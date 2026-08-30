@@ -44,9 +44,9 @@ Fonts self-hosted (`@fontsource` packages) rather than Google Fonts runtime requ
 
 ## Phase 3 — Launch checklist (blockers before sharing the URL anywhere)
 
-- [ ] Replace `[contact@yourdomain.com]` with the real freelance email (not the Altrium work address).
+- [x] Replace `[contact@yourdomain.com]` with the real freelance email — now `dasuntm10@gmail.com` (from the resume).
 - [ ] Create the Cal.com/Calendly booking page; wire both "Book a 15-minute audit" buttons to it.
-- [ ] LinkedIn URL in the About section (currently `#`).
+- [x] LinkedIn URL in the About section — now linked to linkedin.com/in/dasun-theekshana.
 - [ ] Record and embed (or link) at least one 60–120s demo video — the playbook's strongest-proof rule; a poster-image link to YouTube/Loom is fine, no heavy embed.
 - [ ] Flip repo public (required for free GitHub Pages) — confirm nothing sensitive in history first.
 - [ ] Add the live URL to: LinkedIn profile, GitHub profile, Upwork profile, email signature.
