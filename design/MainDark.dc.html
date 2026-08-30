@@ -16,8 +16,29 @@
 </helmet>
 <div style="width: 1200px; min-height: 3520px; background: linear-gradient(165deg, #08070c 0%, #0e0a1a 45%, #1a1038 80%, #271352 100%); color: #f2f0fa; display: flex; flex-direction: column;">
 
+  <!-- Top band: glow + wave background effects -->
+  <div style="position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -220px; right: -160px; width: 720px; height: 720px; border-radius: 50%; background: radial-gradient(circle, rgba(168,85,247,0.38) 0%, rgba(139,92,246,0.14) 42%, rgba(139,92,246,0) 70%);"></div>
+    <div style="position: absolute; top: 240px; left: -260px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(217,70,239,0.26) 0%, rgba(192,38,211,0.09) 45%, rgba(192,38,211,0) 70%);"></div>
+    <div style="position: absolute; top: 460px; right: 60px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(236,72,153,0.16) 0%, rgba(236,72,153,0) 65%);"></div>
+    <svg style="position: absolute; top: 110px; left: -40px;" width="380" height="250" viewBox="0 0 380 250" fill="none">
+      <path d="M-20 40 C 100 0, 220 90, 400 30" stroke="#c084fc" stroke-opacity="0.22" stroke-width="1.4"></path>
+      <path d="M-20 58 C 100 18, 220 108, 400 48" stroke="#c084fc" stroke-opacity="0.18" stroke-width="1.4"></path>
+      <path d="M-20 76 C 100 36, 220 126, 400 66" stroke="#c084fc" stroke-opacity="0.15" stroke-width="1.4"></path>
+      <path d="M-20 94 C 100 54, 220 144, 400 84" stroke="#e879f9" stroke-opacity="0.12" stroke-width="1.4"></path>
+      <path d="M-20 112 C 100 72, 220 162, 400 102" stroke="#e879f9" stroke-opacity="0.09" stroke-width="1.4"></path>
+      <path d="M-20 130 C 100 90, 220 180, 400 120" stroke="#e879f9" stroke-opacity="0.06" stroke-width="1.4"></path>
+    </svg>
+    <svg style="position: absolute; right: -60px; bottom: -30px;" width="460" height="300" viewBox="0 0 460 300" fill="none">
+      <path d="M0 250 C 140 290, 300 160, 480 210" stroke="#c084fc" stroke-opacity="0.25" stroke-width="1.4"></path>
+      <path d="M0 268 C 140 308, 300 178, 480 228" stroke="#c084fc" stroke-opacity="0.20" stroke-width="1.4"></path>
+      <path d="M0 286 C 140 326, 300 196, 480 246" stroke="#e879f9" stroke-opacity="0.16" stroke-width="1.4"></path>
+      <path d="M0 232 C 140 272, 300 142, 480 192" stroke="#e879f9" stroke-opacity="0.13" stroke-width="1.4"></path>
+      <path d="M0 214 C 140 254, 300 124, 480 174" stroke="#a78bfa" stroke-opacity="0.10" stroke-width="1.4"></path>
+      <path d="M0 196 C 140 236, 300 106, 480 156" stroke="#a78bfa" stroke-opacity="0.07" stroke-width="1.4"></path>
+    </svg>
   <!-- Nav -->
-  <div style="display: flex; justify-content: space-between; align-items: center; padding: 28px 72px;">
+  <div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 28px 72px;">
     <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.04em;">DASUN THEEKSHANA</div>
     <div style="display: flex; gap: 36px; align-items: center;">
       <a href="#" style="font-size: 15px; color: #aca6c0;">Work</a>
@@ -28,7 +49,7 @@
   </div>
 
   <!-- Hero -->
-  <div style="display: flex; flex-direction: column; gap: 28px; padding: 96px 72px 72px 72px;">
+  <div style="position: relative; display: flex; flex-direction: column; gap: 28px; padding: 96px 72px 72px 72px;">
     <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #a78bfa;">AI ENGINEERING · PRODUCTION-GRADE · UTC+5:30</div>
     <div style="font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 66px; line-height: 1.04; max-width: 900px; font-weight: 800; letter-spacing: -0.02em;">AI systems that survive contact with production.</div>
     <div style="font-size: 20px; line-height: 1.55; color: #aca6c0; max-width: 680px;">I design and build document-extraction pipelines, grounded support assistants, and booking agents for small and mid-size businesses — integration-heavy, measured with evals, delivered as fixed-scope packages.</div>
@@ -36,6 +57,8 @@
       <a href="#" style="display: inline-block; background: #7c3aed; color: #ffffff; padding: 15px 30px; border-radius: 4px; font-size: 16px; font-weight: 600;">Book a 15-minute audit</a>
       <a href="#" style="display: inline-block; padding: 15px 10px; font-size: 16px; font-weight: 500; color: #f2f0fa;">See the work ↓</a>
     </div>
+  </div>
+
   </div>
 
   <!-- Proof strip -->
