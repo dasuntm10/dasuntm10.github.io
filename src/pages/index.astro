@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BackgroundGlow from '../components/BackgroundGlow.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import Services from '../components/Services.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import Process from '../components/Process.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Dasun Theekshana — AI Engineer';
+const description =
+  'AI systems that survive contact with production. Custom document-extraction pipelines, grounded support assistants, and booking agents for small and mid-size businesses, from an engineer with 4+ years of experience shipping production GenAI for US enterprise SaaS.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="top-band">
+    <BackgroundGlow />
+    <Nav />
+    <Hero />
+  </div>
+  <ProofStrip />
+  <Services />
+  <CaseStudies />
+  <Process />
+  <About />
+  <Footer />
+</BaseLayout>
+
+<style>
+  .top-band {
+    position: relative;
+  }
+</style>

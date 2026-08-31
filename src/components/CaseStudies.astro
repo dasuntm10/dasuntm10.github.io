@@ -1,0 +1,153 @@
+---
+import { caseStudies } from '../data/content';
+---
+
+<section id="work" class="case-studies">
+  <div class="container">
+    <div class="heading-block">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2 class="section-heading">Built, measured, documented.</h2>
+    </div>
+    <div class="list">
+      {
+        caseStudies.map((study) => (
+          <article class="card">
+            <div class="text">
+              <p class="case-eyebrow">{study.eyebrow}</p>
+              <h3>{study.title}</h3>
+              <p class="description">{study.description}</p>
+              {study.note && <p class="note">{study.note}</p>}
+              {study.href && (
+                <a href={study.href} class="case-link">
+                  {study.linkLabel}
+                </a>
+              )}
+            </div>
+            <div class="console">
+              <p class="console-lines">
+                {study.consoleLines.map((line, i) => (
+                  <>
+                    {line}
+                    {i < study.consoleLines.length - 1 && <br />}
+                  </>
+                ))}
+              </p>
+              <p class="stack">{study.stack}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-studies {
+    position: relative;
+    z-index: 1;
+    padding-top: 96px;
+  }
+
+  .heading-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 40px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .case-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--faint);
+    margin: 0;
+  }
+
+  .card:first-child .case-eyebrow {
+    color: var(--accent);
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .note {
+    font-size: 14px;
+    color: var(--faint);
+    margin: 0;
+  }
+
+  .case-link {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .console {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    background: var(--card-bg-alt);
+    border-radius: 4px;
+    padding: 28px;
+  }
+
+  .console-lines {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--console-ink);
+    margin: 0;
+  }
+
+  .stack {
+    font-size: 13px;
+    color: var(--faint);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .card {
+      grid-template-columns: 1fr;
+      padding: 28px;
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .case-studies {
+      padding-top: 56px;
+    }
+  }
+</style>

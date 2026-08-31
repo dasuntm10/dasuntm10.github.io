@@ -1,0 +1,98 @@
+---
+---
+
+<div class="glow-layer" aria-hidden="true">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <svg class="wave wave-top" width="380" height="250" viewBox="0 0 380 250" fill="none">
+    <path d="M-20 40 C 100 0, 220 90, 400 30" stroke="var(--wave-purple)" stroke-opacity="0.22" stroke-width="1.4" />
+    <path d="M-20 58 C 100 18, 220 108, 400 48" stroke="var(--wave-purple)" stroke-opacity="0.18" stroke-width="1.4" />
+    <path d="M-20 76 C 100 36, 220 126, 400 66" stroke="var(--wave-purple)" stroke-opacity="0.15" stroke-width="1.4" />
+    <path d="M-20 94 C 100 54, 220 144, 400 84" stroke="var(--wave-fuchsia)" stroke-opacity="0.12" stroke-width="1.4" />
+    <path d="M-20 112 C 100 72, 220 162, 400 102" stroke="var(--wave-fuchsia)" stroke-opacity="0.09" stroke-width="1.4" />
+    <path d="M-20 130 C 100 90, 220 180, 400 120" stroke="var(--wave-fuchsia)" stroke-opacity="0.06" stroke-width="1.4" />
+  </svg>
+  <svg class="wave wave-bottom" width="460" height="300" viewBox="0 0 460 300" fill="none">
+    <path d="M0 250 C 140 290, 300 160, 480 210" stroke="var(--wave-purple)" stroke-opacity="0.25" stroke-width="1.4" />
+    <path d="M0 268 C 140 308, 300 178, 480 228" stroke="var(--wave-purple)" stroke-opacity="0.20" stroke-width="1.4" />
+    <path d="M0 286 C 140 326, 300 196, 480 246" stroke="var(--wave-fuchsia)" stroke-opacity="0.16" stroke-width="1.4" />
+    <path d="M0 232 C 140 272, 300 142, 480 192" stroke="var(--wave-fuchsia)" stroke-opacity="0.13" stroke-width="1.4" />
+    <path d="M0 214 C 140 254, 300 124, 480 174" stroke="var(--wave-violet)" stroke-opacity="0.10" stroke-width="1.4" />
+    <path d="M0 196 C 140 236, 300 106, 480 156" stroke="var(--wave-violet)" stroke-opacity="0.07" stroke-width="1.4" />
+  </svg>
+</div>
+
+<style>
+  .glow-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .blob-a {
+    top: -220px;
+    right: -160px;
+    width: 720px;
+    height: 720px;
+    background: radial-gradient(circle, var(--glow-violet) 0%, var(--glow-violet-soft) 42%, rgba(139, 92, 246, 0) 70%);
+  }
+
+  .blob-b {
+    top: 240px;
+    left: -260px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, var(--glow-fuchsia) 0%, var(--glow-fuchsia-soft) 45%, rgba(192, 38, 211, 0) 70%);
+  }
+
+  .blob-c {
+    top: 460px;
+    right: 60px;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, var(--glow-pink) 0%, rgba(236, 72, 153, 0) 65%);
+  }
+
+  .wave {
+    position: absolute;
+  }
+
+  .wave-top {
+    top: 110px;
+    left: -40px;
+  }
+
+  .wave-bottom {
+    right: -60px;
+    bottom: -30px;
+  }
+
+  @media (max-width: 767px) {
+    .blob-a {
+      width: 420px;
+      height: 420px;
+      top: -160px;
+      right: -180px;
+    }
+    .blob-b {
+      width: 360px;
+      height: 360px;
+      top: 180px;
+      left: -220px;
+    }
+    .blob-c {
+      display: none;
+    }
+    .wave-top {
+      opacity: 0.6;
+    }
+  }
+</style>

@@ -1,0 +1,133 @@
+---
+import { contact } from '../data/content';
+---
+
+<section id="about" class="about">
+  <div class="container grid">
+    <div class="bio">
+      <p class="eyebrow">ABOUT</p>
+      <h2 class="section-heading about-heading">Engineer first. Based in Colombo, built for your timezone.</h2>
+      <p class="description">
+        I'm Dasun Theekshana, an AI engineer with more than 4 years of experience shipping production GenAI for
+        US enterprise SaaS. At Altrium (engineering partner of PlanYear LLC), I architected 4+ GenAI products, led a 3-person
+        NLP R&amp;D team, and owned LLMOps across the GenAI stack - evals, guardrails, prompt engineering,
+        retrieval, and FastAPI services at scale. Winner of Altrium's ACE award for excellence in AI engineering.
+        UTC+5:30 means full overlap with the European workday and same-day turnaround for US teams: brief me at
+        your end of day, review it your next morning.
+      </p>
+      <div class="social">
+        <a href="https://github.com/dasuntm10">GitHub</a>
+        <a href="https://www.linkedin.com/in/dasun-theekshana/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <p class="cta-title">Have a workflow drowning in manual work?</p>
+      <p class="cta-description">
+        Send me one sentence about it. I'll reply within a day with a 2-minute video of how I'd automate it - no
+        call required, no obligation.
+      </p>
+      <a href={contact.bookingHref} class="btn">Book a 15-minute call</a>
+      <p class="cta-footnote">{contact.email} · replies within 24h</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    position: relative;
+    z-index: 1;
+    padding-top: 96px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px;
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-heading {
+    font-size: clamp(24px, 2.6vw, 30px);
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+    margin-top: 4px;
+  }
+
+  .social a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .cta-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 40px;
+    align-self: start;
+  }
+
+  .cta-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .cta-description {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .cta-card .btn {
+    align-self: flex-start;
+    padding: 14px 28px;
+  }
+
+  .cta-footnote {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--faint);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .about {
+      padding-top: 56px;
+    }
+
+    .cta-card {
+      padding: 28px 22px;
+    }
+
+    .cta-card .btn {
+      width: 100%;
+    }
+  }
+</style>

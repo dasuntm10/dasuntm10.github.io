@@ -1,0 +1,49 @@
+:root {
+  /* Surface */
+  --bg-gradient: linear-gradient(165deg, #08070c 0%, #0e0a1a 45%, #1a1038 80%, #271352 100%);
+  --ink: #f2f0fa;
+  --muted: #aca6c0;
+  --faint: #8981a0;
+
+  /* Accent */
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --accent-solid: #7c3aed;
+
+  /* Surfaces / cards */
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-bg-soft: rgba(255, 255, 255, 0.03);
+  --card-bg-alt: rgba(255, 255, 255, 0.05);
+  --line: rgba(255, 255, 255, 0.12);
+
+  /* Quote band */
+  --quote-gradient: linear-gradient(135deg, #191026, #2b1a52);
+  --quote-ink: #faf9f6;
+  --quote-muted: #b6aed0;
+
+  /* Console-style text inside case cards */
+  --console-ink: #cfc9e2;
+
+  /* Glow decoration colors */
+  --glow-violet: rgba(168, 85, 247, 0.38);
+  --glow-violet-soft: rgba(139, 92, 246, 0.14);
+  --glow-fuchsia: rgba(217, 70, 239, 0.26);
+  --glow-fuchsia-soft: rgba(192, 38, 211, 0.09);
+  --glow-pink: rgba(236, 72, 153, 0.16);
+  --wave-purple: #c084fc;
+  --wave-fuchsia: #e879f9;
+  --wave-violet: #a78bfa;
+
+  /* Type */
+  --font-display: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  /* Layout */
+  --content-width: 1200px;
+  --gutter-desktop: 72px;
+  --gutter-tablet: 40px;
+  --gutter-mobile: 20px;
+  --radius: 6px;
+}

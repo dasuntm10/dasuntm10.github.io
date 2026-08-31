@@ -1,0 +1,131 @@
+---
+import { processSteps } from '../data/content';
+---
+
+<section id="process" class="process">
+  <div class="container">
+    <div class="heading-block">
+      <p class="eyebrow">HOW ENGAGEMENTS WORK</p>
+      <h2 class="section-heading">Small first step, measurable every step.</h2>
+    </div>
+    <div class="steps">
+      {
+        processSteps.map((step) => (
+          <div class="step">
+            <p class="label">{step.label}</p>
+            <p class="title">{step.title}</p>
+            <p class="description">{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="quote-band">
+      <p class="quote">&ldquo;If it isn&rsquo;t measured, it isn&rsquo;t done.&rdquo;</p>
+      <p class="quote-note">
+        Every system ships with an evaluation harness and a CI gate. You see the same numbers I do - retrieval
+        recall, extraction accuracy, groundedness - before and after every change.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process {
+    position: relative;
+    z-index: 1;
+    padding-top: 96px;
+  }
+
+  .heading-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 2px solid var(--accent);
+    padding-top: 18px;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .quote-band {
+    display: flex;
+    gap: 48px;
+    background: var(--quote-gradient);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+  }
+
+  .quote {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--quote-ink);
+    line-height: 1.5;
+    max-width: 420px;
+    margin: 0;
+  }
+
+  .quote-note {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--quote-muted);
+    margin: auto 0;
+  }
+
+  @media (max-width: 900px) {
+    .steps {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quote-band {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .process {
+      padding-top: 56px;
+    }
+
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .quote-band {
+      padding: 28px 24px;
+    }
+  }
+</style>

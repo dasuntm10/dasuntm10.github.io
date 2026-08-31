@@ -13,18 +13,21 @@ Companion to the [design canvas](https://claude.ai/code/artifact/74bf7441-b07a-4
 | Analytics | None at launch; add a privacy-light option (Plausible/GoatCounter) only if traffic decisions ever need it | YAGNI |
 | Contact | `mailto:` + Cal.com/Calendly booking link | **[BOOKING LINK + EMAIL TBD]** — do not launch with the placeholder |
 
-## Design tokens (from the approved canvas direction)
+## Design tokens (dark-violet direction, as shipped)
 
 ```
---bg: #faf9f6;        --ink: #1c1b18;      --muted: #57544c;
---faint: #8a867a;     --line: #e4e1d8;     --card: #ffffff;
---accent: #0f766e;    --accent-dark: #115e59;  --panel: #f4f2ec;
-Display: 'Instrument Serif'   Body: 'Instrument Sans'   Mono: 'IBM Plex Mono'
+--bg-gradient: linear-gradient(165deg, #08070c 0%, #0e0a1a 45%, #1a1038 80%, #271352 100%);
+--ink: #f2f0fa;        --muted: #aca6c0;     --faint: #8981a0;
+--accent: #a78bfa;     --accent-solid: #7c3aed (buttons);   --line: rgba(255,255,255,0.12);
+--card-bg: rgba(255,255,255,0.04);   --quote-gradient: linear-gradient(135deg, #191026, #2b1a52);
+Display: 'Poppins' (600/700/800)   Body: 'Instrument Sans'   Mono: 'IBM Plex Mono'   Quote: 'Instrument Serif' italic
 ```
+
+Full token list: [src/styles/tokens.css](./src/styles/tokens.css). The light "editorial engineering" direction (`design/Main.dc.html`) remains on the canvas as an alternate but isn't built.
 
 Fonts self-hosted (`@fontsource` packages) rather than Google Fonts runtime requests — faster, no third-party call.
 
-## Phase 1 — Build (1–2 days)
+## Phase 1 — Build (1–2 days) — done
 
 - Scaffold Astro project in this repo (`src/pages/index.astro`, `src/components/`, `src/styles/tokens.css`).
 - Implement the canvas's Main artboard as the single page: Nav, Hero, Proof strip, Services (3 cards), Selected Work (3 case cards), Process (4 steps + quote band), About + CTA card, Footer.
