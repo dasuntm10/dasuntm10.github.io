@@ -18,6 +18,7 @@ import { contact } from '../data/content';
       <div class="social">
         <a href="https://github.com/dasuntm10">GitHub</a>
         <a href="https://www.linkedin.com/in/dasun-theekshana/">LinkedIn</a>
+        <a href={`mailto:${contact.email}`}>Email</a>
       </div>
     </div>
     <div class="cta-card">
@@ -26,8 +27,32 @@ import { contact } from '../data/content';
         Send me one sentence about it. I'll reply within a day with a 2-minute video of how I'd automate it - no
         call required, no obligation.
       </p>
-      <a href={contact.bookingHref} class="btn">Book a 15-minute call</a>
-      <p class="cta-footnote">{contact.email} · replies within 24h</p>
+      <form class="contact-form" action={`https://formsubmit.co/${contact.email}`} method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from portfolio site" />
+        <input type="hidden" name="_next" value="https://dasuntm10.github.io/#about" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" />
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="company">Company (optional)</label>
+          <input id="company" type="text" name="company" />
+        </div>
+        <div class="field">
+          <label for="message">What's the workflow?</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send message</button>
+      </form>
+      <p class="cta-footnote">
+        <a href={`mailto:${contact.email}`}>{contact.email}</a> · replies within 24h
+      </p>
     </div>
   </div>
 </section>
@@ -98,9 +123,55 @@ import { contact } from '../data/content';
     margin: 0;
   }
 
-  .cta-card .btn {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .honey {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--faint);
+  }
+
+  .field input,
+  .field textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 11px 12px;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    resize: vertical;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .contact-form .btn {
     align-self: flex-start;
     padding: 14px 28px;
+    margin-top: 4px;
   }
 
   .cta-footnote {
@@ -108,6 +179,16 @@ import { contact } from '../data/content';
     font-size: 13px;
     color: var(--faint);
     margin: 0;
+  }
+
+  .cta-footnote a {
+    color: var(--faint);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .cta-footnote a:hover {
+    color: var(--accent);
   }
 
   @media (max-width: 900px) {
@@ -126,7 +207,7 @@ import { contact } from '../data/content';
       padding: 28px 22px;
     }
 
-    .cta-card .btn {
+    .contact-form .btn {
       width: 100%;
     }
   }
